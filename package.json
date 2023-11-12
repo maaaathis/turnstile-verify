@@ -1,0 +1,32 @@
+{
+  "name": "turnstile-verify",
+  "version": "1.0.0",
+  "main": "./index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "tsc && rollup -c",
+    "publishPackage": "npm publish --access public "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maaaathis/turnstile-verify.git"
+  },
+  "author": "maaaathis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maaaathis/turnstile-verify/issues"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md"
+  ],
+  "devDependencies": {
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup": "^4.3.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {},
+  "description": ""
+}
