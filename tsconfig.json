@@ -1,10 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["es2015", "es2017", "dom"],
-    "module": "CommonJS",
-    "strict": true
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "target": "ES2019",
+    "strict": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "outDir": "./dist"
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }
