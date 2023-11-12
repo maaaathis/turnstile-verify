@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "outDir": "dist",
-    "declaration": true
-  }
+    "target": "es5",
+    "lib": ["es2015", "es2017", "dom"],
+    "module": "CommonJS",
+    "strict": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
