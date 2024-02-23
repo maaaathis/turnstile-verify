@@ -37,7 +37,9 @@
     "build:esm": "swc ./src/index.ts -o dist/index.mjs -C module.type=es6 ",
     "build:tsc": "tsc --project tsconfig.json",
     "check": "tsc --project tsconfig.json --noEmit",
-    "prepublishOnly": "pnpm build"
+    "prepublishOnly": "pnpm build",
+    "test:format": "prettier --cache --check .",
+    "format": "prettier --cache --write ."
   },
   "devDependencies": {
     "@swc/cli": "0.3.9",
@@ -45,6 +47,8 @@
     "@types/node": "20.11.20",
     "npm-run-all": "4.1.5",
     "ts-node": "10.9.2",
+    "prettier": "^3.2.5",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "typescript": "5.3.3"
   },
   "publishConfig": {
