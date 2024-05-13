@@ -67,6 +67,7 @@
     "types": "./dist/index.d.ts"
   },
   "packageManager": "pnpm@9.1.1",
+  "engineStrict": false,
   "engines": {
     "node": ">=18"
   }
