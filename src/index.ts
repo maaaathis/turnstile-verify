@@ -5,7 +5,7 @@ import {
 } from './types';
 
 export class TurnstileVerify {
-  private accessToken: string;
+  private readonly accessToken: string;
 
   constructor(args: TurnstileConstructorArgs) {
     this.accessToken = args.token;

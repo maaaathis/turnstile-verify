@@ -34,7 +34,7 @@
   "scripts": {
     "build": "run-p build:**",
     "build:cjs": "swc ./src/index.ts -o dist/index.js -C module.type=commonjs",
-    "build:esm": "swc ./src/index.ts -o dist/index.mjs -C module.type=es6 ",
+    "build:esm": "swc ./src/index.ts -o dist/index.mjs -C module.type=es6",
     "build:tsc": "tsc --project tsconfig.json",
     "check": "tsc --project tsconfig.json --noEmit",
     "prepublishOnly": "pnpm build",
@@ -42,8 +42,8 @@
     "format": "prettier --cache --write ."
   },
   "devDependencies": {
-    "@swc/cli": "0.3.12",
-    "@swc/core": "1.4.17",
+    "@swc/cli": "0.1.57",
+    "@swc/core": "1.2.198",
     "@types/node": "20.12.8",
     "npm-run-all": "4.1.5",
     "ts-node": "10.9.2",
@@ -66,7 +66,7 @@
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts"
   },
-  "packageManager": "pnpm@9.1.0",
+  "packageManager": "pnpm@9.1.1",
   "engines": {
     "node": ">=18"
   }
