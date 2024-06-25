@@ -1,6 +1,6 @@
 {
   "name": "turnstile-verify",
-  "version": "1.1.11",
+  "version": "1.1.12",
   "description": "Server-side verification for Cloudflare Turnstile",
   "repository": {
     "type": "git",
@@ -15,6 +15,7 @@
   "bugs": {
     "url": "https://github.com/maaaathis/turnstile-verify/issues"
   },
+  "type": "module",
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -34,22 +35,24 @@
   "scripts": {
     "build": "run-p build:**",
     "build:cjs": "swc ./src/index.ts -o dist/index.js -C module.type=commonjs",
-    "build:esm": "swc ./src/index.ts -o dist/index.mjs -C module.type=es6",
+    "build:esm": "swc ./src/index.ts -o dist/index.mjs -C module.type=es6 ",
     "build:tsc": "tsc --project tsconfig.json",
     "check": "tsc --project tsconfig.json --noEmit",
-    "prepublishOnly": "pnpm build",
-    "test:format": "prettier --cache --check .",
-    "format": "prettier --cache --write ."
+    "format": "yarn prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md,mdx}\"",
+    "test": "run-p test:**",
+    "test:format": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,scss,md,mdx}\"",
+    "prepublishOnly": "pnpm test"
   },
   "devDependencies": {
-    "@swc/cli": "0.1.57",
-    "@swc/core": "1.2.198",
-    "@types/node": "20.12.8",
+    "@swc/cli": "^0.3.14",
+    "@swc/core": "^1.6.5",
+    "@types/is-url": "^1.2.32",
+    "@types/jsdom": "21.1.7",
+    "@types/node": "20.14.8",
     "npm-run-all": "4.1.5",
+    "prettier": "^3.3.2",
     "ts-node": "10.9.2",
-    "prettier": "^3.2.5",
-    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "typescript": "5.4.5"
+    "typescript": "5.5.2"
   },
   "publishConfig": {
     "exports": {
@@ -66,8 +69,7 @@
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts"
   },
-  "packageManager": "pnpm@9.1.1",
-  "engineStrict": false,
+  "packageManager": "pnpm@8.6.3",
   "engines": {
     "node": ">=18"
   }
