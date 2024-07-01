@@ -44,7 +44,7 @@
     "prepublishOnly": "pnpm test"
   },
   "devDependencies": {
-    "@swc/cli": "^0.3.14",
+    "@swc/cli": "^0.4.0",
     "@swc/core": "^1.6.5",
     "@types/is-url": "^1.2.32",
     "@types/jsdom": "21.1.7",
