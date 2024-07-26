@@ -1,5 +1,7 @@
-coverage
-dist/
-node_modules/
-tsconfig.tsbuildinfo
-.idea/
+node_modules
+.DS_Store
+dist
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks

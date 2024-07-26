@@ -1,16 +1,19 @@
 {
   "compilerOptions": {
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "target": "ES2019",
+    "moduleResolution": "bundler",
+    "module": "ESNext",
+    "target": "ESNext",
     "strict": true,
-    "incremental": true,
-    "skipLibCheck": true,
-    "declaration": true,
-    "outDir": "./dist"
-  },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "dist"]
+    "noEmit": true,
+    "useUnknownInCatchVariables": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true
+  }
 }
