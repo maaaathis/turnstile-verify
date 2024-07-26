@@ -14,19 +14,14 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: latest
-
       - name: Setup Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: pnpm
+          cache: yarn
 
       - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Run Tests
-        run: pnpm run test:format
+        run: yarn run test:format
