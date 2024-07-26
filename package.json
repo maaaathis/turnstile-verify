@@ -34,7 +34,7 @@
     "test": "run test:format",
     "test:format": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,scss,md,mdx}\"",
     "prepublishOnly": "run test",
-    "release": "yarn build && yarn npm publish"
+    "release": "yarn build && yarn npm publish && npx jsr publish"
   },
   "exports": {
     ".": {
