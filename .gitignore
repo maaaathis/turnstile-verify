@@ -5,3 +5,4 @@ dist
 !.yarn/releases
 !.yarn/plugins
 !.yarn/sdks
+.idea/material_theme_project_new.xml
