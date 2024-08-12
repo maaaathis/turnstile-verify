@@ -46,6 +46,7 @@
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.3",
     "@types/node": "22.2.0",
+    "maathis": "^0.1.1",
     "prettier": "^3.3.2",
     "tsup": "^8.2.3",
     "typescript": "^5.5.4"

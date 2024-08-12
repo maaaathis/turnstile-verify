@@ -1324,6 +1324,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"maathis@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "maathis@npm:0.1.1"
+  peerDependencies:
+    react: "*"
+  checksum: 10c0/3121c9027d0bf9e31c4c296626971cf642d01edc42f09b7e37428faf404b195ca66d37432db68a5047b31e894af074a7bb0ffa89505b7dfff8af679c73654646
+  languageName: node
+  linkType: hard
+
 "make-fetch-happen@npm:^13.0.0":
   version: 13.0.1
   resolution: "make-fetch-happen@npm:13.0.1"
@@ -2177,6 +2186,7 @@ __metadata:
   dependencies:
     "@arethetypeswrong/cli": "npm:^0.15.3"
     "@types/node": "npm:22.2.0"
+    maathis: "npm:^0.1.1"
     prettier: "npm:^3.3.2"
     tsup: "npm:^8.2.3"
     typescript: "npm:^5.5.4"
