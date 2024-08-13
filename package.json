@@ -30,9 +30,9 @@
   "scripts": {
     "build": "yarn test && tsup src/index.ts --dts --format cjs,esm && attw --pack .",
     "check": "tsc --project tsconfig.json --noEmit",
-    "format": "yarn prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md,mdx}\"",
+    "format": "yarn prettier --write \"**/*.{js,jsx,ts,tsx,css,scss}\"",
     "test": "run test:format",
-    "test:format": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,scss,md,mdx}\"",
+    "test:format": "prettier --check \"**/*.{js,jsx,ts,tsx,css,scss}\"",
     "prepublishOnly": "run test",
     "release": "yarn build && yarn npm publish && npx jsr publish"
   },
