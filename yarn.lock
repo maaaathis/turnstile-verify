@@ -1324,12 +1324,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"maathis@npm:^0.1.1":
-  version: 0.1.1
-  resolution: "maathis@npm:0.1.1"
+"maathis@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "maathis@npm:0.2.1"
   peerDependencies:
     react: "*"
-  checksum: 10c0/3121c9027d0bf9e31c4c296626971cf642d01edc42f09b7e37428faf404b195ca66d37432db68a5047b31e894af074a7bb0ffa89505b7dfff8af679c73654646
+  checksum: 10c0/5c924a25f27780add78b962801c99e72f2db79677cd1faa0c4b4df7bb5c243c76a71844fed0c3755f9ac8449675fe08eb4f7700b6ddb32deef43861b1467aa19
   languageName: node
   linkType: hard
 
@@ -2186,7 +2186,7 @@ __metadata:
   dependencies:
     "@arethetypeswrong/cli": "npm:^0.15.3"
     "@types/node": "npm:22.5.0"
-    maathis: "npm:^0.1.1"
+    maathis: "npm:^0.2.1"
     prettier: "npm:^3.3.2"
     tsup: "npm:^8.2.3"
     typescript: "npm:^5.5.4"
