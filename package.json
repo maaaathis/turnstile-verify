@@ -44,7 +44,7 @@
   },
   "packageManager": "yarn@4.3.1",
   "devDependencies": {
-    "@arethetypeswrong/cli": "^0.15.3",
+    "@arethetypeswrong/cli": "^0.16.4",
     "@types/node": "22.5.5",
     "maathis": "^0.2.1",
     "prettier": "^3.3.2",
