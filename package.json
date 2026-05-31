@@ -31,8 +31,9 @@
 		"build": "pnpm test && tsup src/index.ts --dts --format cjs,esm && attw --pack .",
 		"check": "tsc --project tsconfig.json --noEmit",
 		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss}\"",
-		"test": "pnpm test:format",
+		"test": "pnpm test:format && pnpm test:unit",
 		"test:format": "prettier --check \"**/*.{js,jsx,ts,tsx,css,scss}\"",
+		"test:unit": "node --import tsx --test src/*.test.ts",
 		"prepublishOnly": "pnpm test",
 		"release": "pnpm build && pnpm publish && npx jsr publish"
 	},
@@ -49,6 +50,7 @@
 		"mathisch": "^0.4.1",
 		"prettier": "^3.8.3",
 		"tsup": "^8.5.1",
+		"tsx": "^4.22.3",
 		"typescript": "^5.9.3"
 	}
 }
