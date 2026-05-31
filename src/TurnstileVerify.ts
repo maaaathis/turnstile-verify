@@ -49,6 +49,21 @@ export type TurnstileValidationResponse = {
 
 // **TurnstileVerify Class**
 
+/**
+ * Server-side client for verifying Cloudflare Turnstile captcha responses.
+ *
+ * Create an instance with your Turnstile secret key, then call {@link TurnstileVerify.validate}
+ * with the token returned by the widget on the client to confirm a challenge was solved.
+ *
+ * @example
+ * ```ts
+ * const turnstile = new TurnstileVerify({ token: process.env.TURNSTILE_SECRET_KEY });
+ * const result = await turnstile.validate({ response: tokenFromClient });
+ * if (result.valid) {
+ *   // challenge passed
+ * }
+ * ```
+ */
 export class TurnstileVerify {
 	private readonly accessToken: string;
 
