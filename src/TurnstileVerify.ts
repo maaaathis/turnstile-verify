@@ -81,7 +81,7 @@ export class TurnstileVerify {
 	 * @returns A Promise resolving to a TurnstileValidationResponse object.
 	 */
 	async validate(validationArgs: TurnstileValidateArgs): Promise<TurnstileValidationResponse> {
-		const form = new FormData();
+		const form = new URLSearchParams();
 		form.append('secret', this.accessToken);
 		form.append('response', validationArgs.response);
 		if (validationArgs.remoteip) {
@@ -91,7 +91,7 @@ export class TurnstileVerify {
 			form.append('idempotency_key', validationArgs.idempotency_key);
 		}
 
-		const verificationUrl = 'https://challenges.cloudflare.com/turnstile/v0/siteverifys';
+		const verificationUrl = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 		const response = await fetch(verificationUrl, {
 			body: form,
 			method: 'POST',
