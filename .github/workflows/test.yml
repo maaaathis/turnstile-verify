@@ -7,6 +7,31 @@ on:
   pull_request:
 
 jobs:
+  format:
+    name: Format
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 11.4.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check Formatting
+        run: pnpm test:format
+
   test:
     name: Test (Node ${{ matrix.node-version }})
     runs-on: ubuntu-22.04
@@ -25,14 +50,19 @@ jobs:
         with:
           version: 11.4.0
 
-      - name: Setup Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js 22 for install
         uses: actions/setup-node@v6
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 22
           cache: pnpm
 
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ matrix.node-version }}
+
       - name: Run Tests
-        run: pnpm test
+        run: node --import tsx --test src/*.test.ts
